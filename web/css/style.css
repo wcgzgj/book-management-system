@@ -132,3 +132,7 @@ form p > * {
     color: white;
     text-decoration: none;
 }
+
+th {
+    text-align: center;
+}

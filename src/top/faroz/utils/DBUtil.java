@@ -13,6 +13,7 @@ import java.sql.SQLException;
  **/
 public class DBUtil {
     private static final String url="jdbc:mysql:///book_management_db?useUnicode=true&characterEncoding=utf8";
+    // private static final String url="jdbc:mysql:///book_management_db";
     private static final String name="admin";
     private static final String password="123";
 

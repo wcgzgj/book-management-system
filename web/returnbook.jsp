@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>状态查询</title>
+    <title>图书归还</title>
     <%@include file="include/taglib.jsp"%>
 </head>
 <body>

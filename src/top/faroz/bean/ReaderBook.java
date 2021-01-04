@@ -10,10 +10,12 @@ package top.faroz.bean;
  * @Version 1.0
  **/
 public class ReaderBook {
+    private int id;
     private int reader_id;
     private int book_ISBN;
 
-    public ReaderBook(int reader_id, int book_ISBN) {
+    public ReaderBook(int id, int reader_id, int book_ISBN) {
+        this.id = id;
         this.reader_id = reader_id;
         this.book_ISBN = book_ISBN;
     }
@@ -35,5 +37,13 @@ public class ReaderBook {
 
     public void setBook_ISBN(int book_ISBN) {
         this.book_ISBN = book_ISBN;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

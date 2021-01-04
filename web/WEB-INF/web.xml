@@ -34,5 +34,22 @@
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DeleteReaderServlet</servlet-name>
+        <servlet-class>top.faroz.servlet.DeleteReaderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteReaderServlet</servlet-name>
+        <url-pattern>/deleteReader</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BorrowBookServlet</servlet-name>
+        <servlet-class>top.faroz.servlet.BorrowBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BorrowBookServlet</servlet-name>
+        <url-pattern>/borrowbook</url-pattern>
+    </servlet-mapping>
 
 </web-app>

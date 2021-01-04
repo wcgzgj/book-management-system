@@ -28,7 +28,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">校园管理</a>
+            <a class="navbar-brand" href="#">图书管理</a>
         </div>
 
         <div class="collapse navbar-collapse header" id="bs-example-navbar-collapse-1">

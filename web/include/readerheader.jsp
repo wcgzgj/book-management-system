@@ -29,14 +29,14 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">校园管理</a>
+            <a class="navbar-brand" href="#">图书管理</a>
         </div>
 
         <div class="collapse navbar-collapse header" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="./readerindex.jsp">首页 <span class="sr-only">(current)</span></a></li>
                 <li><a href="./borrowbook.jsp">图书借阅</a></li>
-                <li><a href="./readernotice.jsp">状态查询</a></li>
+                <li><a href="./returnbook.jsp">图书归还</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">欢迎 ${sessionScope.username}</a></li>
