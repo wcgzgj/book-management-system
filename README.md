@@ -43,35 +43,35 @@ javaweb，图书管理系统，软件设计与分析，期末大作业
 
 **登录界面：**
 
-![image-20210106031536812](https://gitee.com/faro/images/raw/master/img/20210106044921.png)
+![image-20210106050331561](https://gitee.com/faro/images/raw/master/img/20210106050331.png)
 
 **注册界面：**
 
-![image-20210106031601794](https://gitee.com/faro/images/raw/master/img/20210106044922.png)
+![image-20210106050350058](https://gitee.com/faro/images/raw/master/img/20210106050350.png)
 
 **读者端首页：**
 
-![image-20210106031638433](https://gitee.com/faro/images/raw/master/img/20210106044923.png)
+![image-20210106050404265](https://gitee.com/faro/images/raw/master/img/20210106050404.png)
 
 **借阅界面：**
 
-![image-20210106032047088](https://gitee.com/faro/images/raw/master/img/20210106044924.png)
+![image-20210106050416168](https://gitee.com/faro/images/raw/master/img/20210106050416.png)
 
 **归还界面：**
 
-![image-20210106032108675](https://gitee.com/faro/images/raw/master/img/20210106044925.png)
+![image-20210106050428844](https://gitee.com/faro/images/raw/master/img/20210106050428.png)
 
 **管理员首页：**
 
-![image-20210106032150464](https://gitee.com/faro/images/raw/master/img/20210106044926.png)
+![image-20210106050444581](https://gitee.com/faro/images/raw/master/img/20210106050444.png)
 
 **图书管理界面：**
 
-![image-20210106032214876](https://gitee.com/faro/images/raw/master/img/20210106044927.png)
+![image-20210106050459501](https://gitee.com/faro/images/raw/master/img/20210106050459.png)
 
 **用户管理界面：**
 
-![image-20210106032236791](https://gitee.com/faro/images/raw/master/img/20210106044928.png)
+![image-20210106050509209](https://gitee.com/faro/images/raw/master/img/20210106050509.png)
 
 ## 项目内容描述
 
@@ -89,7 +89,7 @@ javaweb，图书管理系统，软件设计与分析，期末大作业
 
 > 因为读者的导航栏和管理员的导航栏布局类似，所以只介绍一个读者的
 
-![image-20210106032819824](https://gitee.com/faro/images/raw/master/img/20210106044929.png)
+![image-20210106050528150](https://gitee.com/faro/images/raw/master/img/20210106050528.png)
 
 **代码如下：**
 
@@ -144,7 +144,7 @@ javaweb，图书管理系统，软件设计与分析，期末大作业
 
 #### 登录界面
 
-![image-20210106032542703](https://gitee.com/faro/images/raw/master/img/20210106044930.png)
+![image-20210106050544295](https://gitee.com/faro/images/raw/master/img/20210106050544.png)
 
 **代码如下：**
 
@@ -248,7 +248,7 @@ javaweb，图书管理系统，软件设计与分析，期末大作业
 <input type="button" id="btn_register" class="btn btn-primary" value="注册"/>
 ```
 
-![image-20210106033651895](https://gitee.com/faro/images/raw/master/img/20210106044931.png)
+![image-20210106050609065](https://gitee.com/faro/images/raw/master/img/20210106050609.png)
 
 
 
@@ -306,7 +306,7 @@ javaweb，图书管理系统，软件设计与分析，期末大作业
 
 #### 图书借阅
 
-![image-20210106034135744](https://gitee.com/faro/images/raw/master/img/20210106044932.png)
+![image-20210106050627814](https://gitee.com/faro/images/raw/master/img/20210106050627.png)
 
 **代码如下：**
 
@@ -526,7 +526,7 @@ javaweb，图书管理系统，软件设计与分析，期末大作业
 <input type="button" id="btn_register" class="btn btn-primary" value="注册"/>
 ```
 
-![image-20210106033651895](https://gitee.com/faro/images/raw/master/img/20210106044931.png)
+![image-20210106050655220](https://gitee.com/faro/images/raw/master/img/20210106050655.png)
 
 
 
@@ -534,7 +534,7 @@ javaweb，图书管理系统，软件设计与分析，期末大作业
 
 > 比如编辑的笔的形状，删除的小垃圾桶形状
 
-![image-20210106040332133](https://gitee.com/faro/images/raw/master/img/20210106044933.png)
+![image-20210106050711858](https://gitee.com/faro/images/raw/master/img/20210106050711.png)
 
 ```jsp
 <a href="/editbook.jsp?bookISBN=${book.ISBN}" class="glyphicon glyphicon-edit"></a>
@@ -547,7 +547,7 @@ javaweb，图书管理系统，软件设计与分析，期末大作业
 
 > 项目里的斑马条纹表格，也是使用的bootstrap
 
-![image-20210106040522174](https://gitee.com/faro/images/raw/master/img/20210106044934.png)
+![image-20210106050729140](https://gitee.com/faro/images/raw/master/img/20210106050729.png)
 
 ```jsp
 <table  class="table table-striped" style="text-align: center;margin: auto;width: 80%">
@@ -714,7 +714,7 @@ public List<Book> list() {
 
 > 这里，我先来分享一下 servlet的事件处理流程
 >
-> ![image-20210106035516129](https://gitee.com/faro/images/raw/master/img/20210106044935.png)
+> ![image-20210106050821845](https://gitee.com/faro/images/raw/master/img/20210106050821.png)
 >
 > 下面，我就以一个BorrowBookServlet来举例，并展示一下整个由前端到后端，再到前端的流程
 
@@ -823,6 +823,8 @@ public class BorrowBookServlet extends HttpServlet {
 
 上面，就是用户选择借阅以后，整个的运行流程。
 
+其他的功能，因为和上面是实现方式差不多，所以不再过多的进行赘述
+
 
 
 ## 总结
@@ -832,6 +834,8 @@ public class BorrowBookServlet extends HttpServlet {
 其实，这件事情可以说明，我们班上的学生只喜欢背诵课本知识，但是对代码还是有畏惧心理，而且学校找的达内，教学质量是多么的差，从达内开课至今，也有块一年半了，但我估计，大部分人，还没法用javaSE完成一个小型项目，甚至可能连java都不会写，更别提javaWeb了。我之前也是深受达内垃圾教学质量的荼毒，直到后来我靠着拼命的自学，才算是从达内挖出的教学天坑中爬出来的。我认为，如果学校资金不足，不足以请动大型企业为我们进行企业实训，目前最好的办法，是撤掉达内，换更靠谱的教育机构（比如黑马或者尚硅谷），或者干脆毙掉这个没用的嵌入式培养，直接将课程交给本校老师来教，并把那个没用的人机交互课，换成教前端相关的知识。
 
 扯远了，本次项目，给我带来的最大收获，就是再一次熟悉了javaEE的开发流程，这也为我后期学习Spring，SpringMVC，Mybatis等框架打下了基础。CRUD反正作为程序员都跑不了，但如果我早一点入CRUD的坑，我也就能早一步迈入架构师的大门。虽然留给我大三暑假实习，只剩下七个月的时间，但是我相信，我一定能在这段时间内，啃下架构、计网、操作系统这些硬石头，并能在暑期找到一份高质量的实习，在毕业季找到一份高质量的工作，在未来，能成为技术专家或者高级管理层，在再后的未来，能够自主创业，或者进入中小型企业，成为技术顾问或是合伙人的，直到最后创业成功，或是拿到期权，帮助所在的企业实现上市，从而走向自己的财富自由之路。
+
+
 
 
 
