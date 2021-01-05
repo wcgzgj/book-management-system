@@ -52,4 +52,13 @@
         <url-pattern>/borrowbook</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ReturnBookServlet</servlet-name>
+        <servlet-class>top.faroz.servlet.ReturnBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReturnBookServlet</servlet-name>
+        <url-pattern>/returnbook</url-pattern>
+    </servlet-mapping>
+
 </web-app>

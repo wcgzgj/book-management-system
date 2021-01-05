@@ -4,7 +4,11 @@ import top.faroz.bean.Reader;
 import top.faroz.bean.ReaderBook;
 import top.faroz.dao.ReaderBookDao;
 import top.faroz.dao.ReaderDao;
+import top.faroz.utils.DBUtil;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -23,5 +27,22 @@ public class ReaderBookService {
                 return readerBook;
         }
         return null;
+    }
+
+    /**
+     * 根据用户ID和ISBN删除对应数据
+     * @param id
+     * @param ISBN
+     */
+    public void deleteByReaderAndBook(int id,int ISBN) {
+        String sql = "delete from reader_book where reader_id=? and book_isbn=?";
+        try (Connection conn = DBUtil.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)){
+            stmt.setInt(1,id);
+            stmt.setInt(2,ISBN);
+            stmt.execute();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }
