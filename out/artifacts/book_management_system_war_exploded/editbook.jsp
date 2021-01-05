@@ -22,6 +22,48 @@
             margin-top: 40px;
         }
     </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#confirm").click(function () {
+                let price = $("#price").val();
+                let writer = $("#writer").val();
+                let num = $("#num").val();
+                let name = $("#name").val();
+                $.ajax({//ajax传输json数据
+                    type:"post",//请求方式
+                    url:"/editbook",//请求传输的位置
+                    data:{"userid":$("#userid").val(),
+                        "password":$("#password").val(),
+                        "identity":$("input[name=identity]:checked").val()},
+                    error:function () {
+                        alert("登录错误");
+                    },
+                    success:function (data) {
+                        if (data == -1) {
+                            alert("请输入完整的信息");
+                        } else if (data == -2) {
+                            alert("账号必须是数字");
+                        } else if (data == -3) {
+                            alert("查无此人！");
+                        } else if (data == -4) {
+                            alert("密码输入错误！");
+                        } else {
+                            // alert("登录成功！");成功就不提示了，直接进入
+                            // <====重新定位到可交互界面
+                            // 学生和老师的登录界面是不一样的
+                            // 学生的操作和老师的操作有区别
+                            // 两个的header要有区别
+                            if (identity == "admin") {
+                                window.location.href = "./index.jsp";
+                            } else {
+                                window.location.href = "./readerindex.jsp";
+                            }
+                        }
+                    }
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -43,25 +85,25 @@
         <tr>
             <td>书名:</td>
             <td>
-                <input type="text" value="${book.name}">
+                <input type="text" value="${book.name}" id="name">
             </td>
         </tr>
         <tr>
             <td>价格:</td>
             <td>
-                <input type="text" value="${book.price}">
+                <input type="text" value="${book.price}" id="price">
             </td>
         </tr>
         <tr>
             <td>作者:</td>
             <td>
-                <input type="text" value="${book.writer}">
+                <input type="text" value="${book.writer}" id="writer">
             </td>
         </tr>
         <tr>
             <td>数量:</td>
             <td>
-                <input type="text" value="${book.num}">
+                <input type="text" value="${book.num}" id="num">
             </td>
         </tr>
     </table>
@@ -69,7 +111,7 @@
         <table style="margin: auto">
             <tr>
                 <td>
-                    <a class="btn btn-primary" style="margin: 30px">确认</a>
+                    <button class="btn btn-primary" id="confirm">确认</button>
                 </td>
                 <td>
                     <a class="btn btn-primary" href="managebook.jsp">取消</a>
