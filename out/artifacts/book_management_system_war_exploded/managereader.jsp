@@ -41,12 +41,6 @@
                 <td>
 <%--                    管理员对读者只有一个删除权限--%>
                     <a href="/deleteReader?readerID=${reader.id}" class="glyphicon glyphicon-trash"></a>
-<%--                    <button class="btn btn-success">--%>
-<%--                        <a href="/teacherholiday?stuID=${holidayWithStuName.holiday.stu_id}&staID=${sessionScope.user.id}&status=<%="agree"%>" id="link_agree" class="link_style">同意</a>--%>
-<%--                    </button>--%>
-<%--                    <button class="btn btn-danger">--%>
-<%--                        <a href="/teacherholiday?stuID=${holidayWithStuName.holiday.stu_id}&staID=${sessionScope.user.id}&status=<%="reject"%> " id="link_reject" class="link_style">拒绝</a>--%>
-<%--                    </button>--%>
                 </td>
             </tr>
         </c:forEach>

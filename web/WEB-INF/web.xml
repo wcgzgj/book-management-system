@@ -61,4 +61,31 @@
         <url-pattern>/returnbook</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DeleteBookServlet</servlet-name>
+        <servlet-class>top.faroz.servlet.DeleteBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBookServlet</servlet-name>
+        <url-pattern>/deletebook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddBookServlet</servlet-name>
+        <servlet-class>top.faroz.servlet.AddBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddBookServlet</servlet-name>
+        <url-pattern>/addbook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditBookServlet</servlet-name>
+        <servlet-class>top.faroz.servlet.EditBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditBookServlet</servlet-name>
+        <url-pattern>/editbook</url-pattern>
+    </servlet-mapping>
+
 </web-app>

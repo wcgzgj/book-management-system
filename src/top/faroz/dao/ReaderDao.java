@@ -56,7 +56,14 @@ public class ReaderDao {
     }
 
     public void delete(int id) {
-
+        String sql = "delete from reader where id=?";
+        try(Connection conn = DBUtil.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1,id);
+            stmt.execute();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     public Reader get(int id) {

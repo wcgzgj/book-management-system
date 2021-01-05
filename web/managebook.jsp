@@ -42,7 +42,9 @@
             <th>名称</th>
             <th>作者</th>
             <th>价格</th>
+            <th>数量</th>
             <th>编辑</th>
+            <th>删除</th>
         </tr>
         <c:forEach items="${bookList}" var="book" varStatus="st">
             <tr>
@@ -51,12 +53,20 @@
                 <td>${book.name}</td>
                 <td>${book.writer}</td>
                 <td>${book.price}</td>
+                <td>${book.num}</td>
                 <td>
                     <a href="/editbook.jsp?bookISBN=${book.ISBN}" class="glyphicon glyphicon-edit"></a>
+                </td>
+                <td>
+                    <a href="/deletebook?bookISBN=${book.ISBN}" class="glyphicon glyphicon-trash"></a>
                 </td>
             </tr>
         </c:forEach>
     </table>
+</div>
+
+<div style="text-align: center">
+    <a href="/addbook.jsp" class="btn btn-primary">添加图书</a>
 </div>
 
 

@@ -45,4 +45,26 @@ public class ReaderBookService {
             throwables.printStackTrace();
         }
     }
+
+    public void deleteByReader(int id) {
+        String sql = "delete from reader_book where reader_id=? ";
+        try (Connection conn = DBUtil.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)){
+            stmt.setInt(1,id);
+            stmt.execute();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public void deleteByBook(int ISBN) {
+        String sql = "delete from reader_book where book_isbn=?";
+        try (Connection conn = DBUtil.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)){
+            stmt.setInt(1,ISBN);
+            stmt.execute();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }

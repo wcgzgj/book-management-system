@@ -1,16 +1,15 @@
-<%@ page import="top.faroz.dao.BookDao" %>
-<%@ page import="top.faroz.bean.Book" %>
-<%@ page import="javax.xml.transform.Source" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: faro_z
-  Date: 2021/1/4
-  Time: 下午4:41
+  Date: 2021/1/6
+  Time: 上午2:08
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>编辑图书</title>
+    <title>添加图书</title>
+
     <%@include file="include/taglib.jsp"%>
 
     <style>
@@ -26,14 +25,14 @@
     <script>
         $(document).ready(function () {
             $("#confirm").click(function () {
+                let ISBN = $("#ISBN").val();
                 let price = $("#price").val();
                 let writer = $("#writer").val();
                 let num = $("#num").val();
                 let name = $("#name").val();
-                let ISBN = $(this).val();
                 $.ajax({//ajax传输json数据
                     type: "post",//请求方式
-                    url: "/editbook",//请求传输的位置
+                    url: "/addbook",//请求传输的位置
                     data: {
                         "price": price,
                         "writer": writer,
@@ -42,11 +41,12 @@
                         "ISBN":ISBN
                     },
                     error: function () {
-                        alert("修改错误");
+                        alert("登录错误");
                     },
                     success: function (data) {
-                        alert("修改成功！");
+                        alert("添加成功！");
                         window.location.href="/managebook.jsp";
+
                     }
                 });
             });
@@ -55,43 +55,37 @@
 </head>
 <body>
 
-<%
-    String bookISBN = request.getParameter("bookISBN");
-    System.out.println(bookISBN);
-    BookDao bookDao = new BookDao();
-    Book book = bookDao.get(Integer.parseInt(bookISBN));
-    request.setAttribute("book",book);
-%>
-
 <div style="margin: auto;text-align: center">
-    <p class="notice_head">修改书本信息</p>
+    <p class="notice_head">添加图书</p>
     <table class="table table-striped" style="text-align: center;margin: auto;width: 80%" >
         <tr>
             <td>ISBN:</td>
-            <td>${book.ISBN}</td>
+            <td>
+                <input type="text" id="ISBN">
+            </td>
         </tr>
         <tr>
             <td>书名:</td>
             <td>
-                <input type="text" value="${book.name}" id="name">
+                <input type="text" id="name">
             </td>
         </tr>
         <tr>
             <td>价格:</td>
             <td>
-                <input type="text" value="${book.price}" id="price">
+                <input type="text" id="price">
             </td>
         </tr>
         <tr>
             <td>作者:</td>
             <td>
-                <input type="text" value="${book.writer}" id="writer">
+                <input type="text" id="writer">
             </td>
         </tr>
         <tr>
             <td>数量:</td>
             <td>
-                <input type="text" value="${book.num}" id="num">
+                <input type="text" id="num">
             </td>
         </tr>
     </table>
@@ -99,7 +93,7 @@
         <table style="margin: auto">
             <tr>
                 <td>
-                    <button class="btn btn-primary" id="confirm" value="${book.ISBN}">确认</button>
+                    <button class="btn btn-primary" id="confirm">确认</button>
                 </td>
                 <td>
                     <a class="btn btn-primary" href="managebook.jsp">取消</a>
@@ -110,5 +104,6 @@
 </div>
 
 <%@include file="include/footer.jsp"%>
+
 </body>
 </html>
